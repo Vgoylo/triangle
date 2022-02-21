@@ -1,12 +1,3 @@
-class Triangle
+require_relative 'triangle'
 
-  attr_accessor :a, :b, :c
-
-  def initialize(a, b, c)
-    @a = a
-    @b = b
-    @c = c
-  end
-
-  def triangle; end
-end
+triangle_1 = Triangle.new(12, 5, 10)

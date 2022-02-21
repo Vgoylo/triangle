@@ -1,11 +1,14 @@
-def triangle(a, b, c)
-  #a + b > c && a + c > b && b + c > a ? 'Yes triangle' : 'No triangle'
+class Triangle
 
-  if a + b > c && a + c > b && b + c > a
-    puts 'Yes triangle'
-  else
-    puts 'No triangle'
+  attr_accessor :a, :b, :c
+
+  def initialize(a, b, c)
+    @a = a
+    @b = b
+    @c = c
+  end
+
+  def triangle
+    a + b > c && a + c > b && b + c > a ? 'True' : 'False'
   end
 end
-
-p triangle(19, 10, 20)
