@@ -8,4 +8,8 @@ class Triangle
   def valid?
     a + b > c && a + c > b && b + c > a
   end
+
+  def format
+    @triangle = Triangle.new(12, 5, 16)
+  end
 end
