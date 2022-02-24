@@ -6,12 +6,16 @@ class Triangle
   end
 
   def valid?
-    if (a.is_a?(Integer) || a.is_a?(Float)) && (b.is_a?(Integer) || b.is_a?(Float)) && (c.is_a?(Integer) || c.is_a?(Float))
-      a + b > c && a + c > b && b + c > a
-    end
+    a + b > c && a + c > b && b + c > a if check_classes?
   end
 
-  def format
-    @triangle = Triangle.new(12, 5, 16)
+  private
+
+  def check_classes?
+    check_class?(a) && check_class?(b) && check_class?(c)
+  end
+
+  def check_class?(inctanse)
+    inctanse.is_a?(Integer) || inctanse.is_a?(Float)
   end
 end
